@@ -15,7 +15,7 @@ const getMovies = (req, res, next) => {
     })
     .catch(next);
 };
-// создаем фильм
+// сохранить фильм
 const createMovie = (req, res, next) => {
   const {
     country, director, duration, year, description, image,

@@ -58,6 +58,13 @@ const login = (req, res, next) => {
       next(new AuthError(`необходимо авторизоваться: ${err.message}`));
     });
 };
+// удаляем куки
+const logout = (req, res) => {
+  res
+    .clearCookie('jwt')
+    .status(204)
+    .end();
+};
 
 // возвращаем инфу о пользователе
 const getUser = (req, res, next) => {
@@ -88,5 +95,5 @@ const updateUser = (req, res, next) => {
 };
 
 module.exports = {
-  createUser, updateUser, login, getUser,
+  createUser, updateUser, login, getUser, logout,
 };
