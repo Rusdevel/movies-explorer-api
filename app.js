@@ -13,7 +13,8 @@ const NotFoundError = require('./errors/NotFoundError');
 const corsAllowed = [
   'http://localhost:3000',
   'http://localhost:3001',
-  'https://api.nomoreparties.co/beatfilm-movies',
+  'https://front-movies.nomoredomains.work',
+  'http://51.250.25.27',
 ];
 
 // Слушаем 3000 порт
