@@ -13,8 +13,9 @@ const NotFoundError = require('./errors/NotFoundError');
 const corsAllowed = [
   'http://localhost:3000',
   'http://localhost:3001',
+  'http://front-movies.nomoredomains.work',
   'https://front-movies.nomoredomains.work',
-  'http://51.250.25.27',
+  'http://51.250.18.104',
 ];
 
 // Слушаем 3000 порт
