@@ -31,7 +31,7 @@ const createUser = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new RequestError('Некорректные данные'));
-      } else if (err.name === 'MongoError' && err.code === 11000) {
+      } else if (err.name === 'MongoServerError' && err.code === 11000) {
         next(new ConflictEmailError('Указанный пользователь уже зарегистрирован'));
       } else { next(err); }
     })
