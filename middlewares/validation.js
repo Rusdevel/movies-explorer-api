@@ -34,7 +34,7 @@ const validateMovies = celebrate({
     director: Joi.string().min(2).max(50).required(),
     duration: Joi.number().required(),
     year: Joi.string().min(2).max(30).required(),
-    description: Joi.string().min(2).max(1000).required(),
+    description: Joi.string().min(2).required(),
     movieId: Joi.number().required(),
     image: Joi.string().required().custom((value) => {
       if (!isURL(value)) {
